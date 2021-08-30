@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 40px;
+        }
+        nav{
+            float: right;
+            padding: 10px;
+            position: relative;
+            top: -20px;
+
+        }
+        header ul {
+            display: flex;
+            margin: auto;
+            list-style-type: none;
+           
+        }
+        header ul a {
+            color: lightgrey;
+            font-size: 20px;
+            text-decoration: none;
+            text-shadow: 2px 2px lightgrey;
+        }
+        header ul li {
+            margin-right: auto;
+            border-right: solid thin white;
+            padding-right: 25px;
+        }
+        header ul li a:hover{
+            font-weight: bold;
+            color: black;
+            text-decoration: underline;
+            border-bottom: solid 3px red;
+        }
+        .loginbody {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 20%;
+            border-radius: 10px;
+            margin-left: 40%;
+            margin-top: 7%;
+            line-height: 50px;
+
+
+        }
+        .loginbody h1 {
+            color: white;
+            text-decoration: underline red;
+            text-shadow: 2px 2px black;
+            text-align: center;
+
+        }
+        form input {
+            background: none;
+            border: none;
+            border-bottom: 3px solid green;
+            padding: 10px;
+
+        }
+        ::-webkit-input-placeholder {
+            color: pink;
+        }
+
+        body {
+            background-image: url(./static/todd-trapani-6fzpsJ8d0pI-unsplash.jpg);
+            background-position: center;
+            background-size: 100% ;
+        }
+
+        .submitbutton button {
+            border-radius: 10px;
+            color: white;
+            background-color: black;
+            padding: 10px;
+            width: 100%;
+            animation: c 50s linear infinite;
+            background: linear-gradient(121.19deg, rgba(133, 239, 49, 0) 25.73%,hsla(0, 0%, 100%, 0.3) 45.27%,
+            rgba(133, 239, 49, 0) 62.27% ), black;
+            transition: background-color 0.5s ease;
+            @keyframes c {0% {background-position: -5000px 0;  }to {background-position: 5000px 0; } }
+            
+        }
+        .submitbutton button:hover{
+            background-color: gold;
+        }
+        .ifyoudont a {
+            color: white;
+        }
+        .password a {
+            color: white;
+            font-size: 9px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./copy.html">Home</a></li>
+                <li><a href="">Quiz</a></li>
+                <li><a href="">Login/Signup</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Feedback</a></li>
+                <li><a href="">My Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="loginbody">
+        <h1>Login</h1>
+        <form action="">
+            <div class="username">
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="password">
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="password">
+            <a href="./forgotpassword.html">Forgot Password</a> 
+            </div>
+            <div class="submitbutton">
+                <button type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+        <div class="ifyoudont">
+            <a href="./registrationcopy.html">If u dont have an account you can Sign Up here</a>
+        </div>
+    </div>
+</body>
+</html>

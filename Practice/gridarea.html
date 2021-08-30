@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 100px;
+            gap: 1rem;
+            grid-template-areas: 
+            "header header header"
+            "sidebar content1 content1"
+            "sidebar content2 content3"
+            "footer footer footer";
+            width: 100%;
+            height: 100vh;
+        }
+        .header {
+            grid-area: header;
+            border: 3px solid green;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            border: 3px solid blue;
+            background-image: linear-gradient(blue, lightblue);
+        }
+        .content1 {
+            grid-area: content1;
+            border: 3px solid red;
+            background-image: linear-gradient(red, pink);
+        }
+        .content2 {
+            grid-area: content2;
+            border: 3px solid red;
+            box-shadow: 10px 10px 30px 0px pink;
+        }
+        .content3 {
+            grid-area: content3;
+            border: 3px solid red;
+            background-image: linear-gradient(red, pink);
+        }
+        .footer {
+            grid-area: footer;
+            border: 3px solid yellow;
+            background-image: linear-gradient(yellow, yellowgreen);
+        }
+        header{
+            background-color: lightblue;
+            border-radius: 10px;
+            box-shadow: 10px 10px 30px 0px blue;
+        }
+        header nav ul {
+            margin: auto;
+            padding: 10px;
+            display: flex;
+        }
+        header nav ul li {
+            list-style-type: none;
+            margin: auto;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bolder;
+            text-shadow: 2px 2px cyan;
+        }
+        header nav ul li a:hover{
+            text-decoration: underline;
+            font-size: 25px;
+        }
+        .content2 .image img{
+            width: 100%;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Registration</a></li>
+                        <li><a href="">Page 3</a></li>
+                        <li><a href="">Page 4</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div class="sidebar">
+            sidebar
+        </div>
+        <div class="content1">
+            content 1
+        </div>
+        <div class="content2">
+            <div class="image">
+                <img src="static/youssef-sarhan-tze1kKj7Lgg-unsplash (1).jpg" alt="iPHoneDarkPicture">
+            </div>
+            <div class="info">
+                <p>iPhone 11</p>
+            </div>
+        </div>
+        <div class="content3">
+            content 3
+        </div>
+        <div class="footer">
+            footer
+        </div>
+    </div>
+</body>
+</html>

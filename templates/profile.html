@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Your Account</title>
+</head>
+<body>
+    <div class="header">
+        <header>
+            <div class="logo">  
+                <a href="./index.html"><img src="../static/orangeshoe.png" alt="Logo"></a>
+            </div>
+        <div class="searchbox">
+            <input type="text" placeholder="Search">
+                <div class="searchicon">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/login">Login/Signup</a></li>
+                <li><a href="./allproduct.html">All Products</a>
+                    <div class="dropdown">
+                        <div class="containerparent">
+                            <div class = "ddheader">
+                                <button type="submit" name="signinbutton">Sign In</button>
+                            </div>
+
+                            <div class = "ddleft">
+                                <h1>Brands</h1>
+                                <ul>
+                                    <li><a href="">Nike</a></li>
+                                    <li><a href="">Under Armour</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="ddright">
+                                <h1>Your Account</h1>
+                                <ul>
+                                    <li><a href="/profile.html">Account Profile</a></li>
+                                    <li><a href="">Log in</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <div class="cartlogo">
+                    <li><a href="/cart"><img src="../static/orangecart.png" alt="Cart"></a></li>
+                </div>
+            </ul>
+        </nav>
+        </header>
+    </div>
+    <div class="pfcontainer">
+        <div class="topsection">
+            <div class="headerpf">
+                <h1>{{name}}</h1>
+            </div>
+            <div class="pfp">
+                <img src="../static/pfp.png" alt="pfp">
+            </div>
+            <div class="usernamepf">
+                <H3>@{{username}}</H3>
+            </div>
+            <!-- <div class="emailpf">
+                {{email}}
+            </div> -->
+            <div class="location">
+                <h3><i>{{location}}</i></h3>
+            </div>
+            <div class="editbutton">
+                <a href=""><p>Edit Profile</p></a>
+            </div>
+        </div>
+        <div class="bottomsection">
+            <h2>YOUR PAST ACTIVITES</h2>
+        </div>
+    </div>
+</body>
+</html>

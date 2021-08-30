@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .wrapper{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            grid-template-areas: 
+            "menubar menubar menubar menubar"
+            "content content content content"
+            "products products proudcts products"
+            "footer footer footer footer";
+            
+        }
+        .menubar {
+            grid-area: menubar;
+            border: 3px solid;
+        }
+        .content {
+            grid-area: content;
+            border: 3px solid;
+        }
+        .products {
+            grid-area: products;
+            border: 3px solid;
+        }
+        .footer {
+            grid-area: footer;
+            border: 3px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menubar">
+            MenuBar
+        </div>
+        <div class="content">
+            Content
+        </div>
+        <div class="products">
+            Products
+        </div>
+        <div class="footer">
+            Footer
+        </div>
+    </div>
+    
+</body>
+</html>

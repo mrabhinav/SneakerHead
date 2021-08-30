@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +10,7 @@ width: 100%;
 height: 100vh;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr;
-gap: 10px;
+/* gap: 10px; */
 grid-template-areas:
     "header header header"
     "content-1 content-1 content-1"
@@ -17,6 +19,7 @@ grid-template-areas:
 }
 .header {
 grid-area: header;
+
 
 }
 
@@ -29,19 +32,26 @@ body{
 .content-1 {
 grid-area: content-1;
 margin: 0;
-padding: 0; 
+padding: 5px; 
 background-image: url(../static/guccishoes.jpeg);                  
-background-size: cover;
+background-size: 100% 100%;
 width: 100%;
-height: 500px;
+height: 700px;
 }
 
-
+.content-1 h1 {
+    text-align: center;
+    margin-top: 10%;
+    font-weight: bolder;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+}
 
 .footer {
 grid-area: footer;
-background-image: linear-gradient(rgb(207, 63, 207),purple);
-border:3px solid ;
+background-color: lightgray;
+padding: 10px;
+padding-bottom: 0;
 
 }
 
@@ -52,6 +62,8 @@ border:3px solid ;
 header {
     background-color: #003366;
     display: flex;
+    
+
 }
 nav{
     padding: 10px;
@@ -82,11 +94,12 @@ header ul li a:hover{
 .logo img {
     width: 50px;
     height: 50px;
+
 }
 
 .content-2 {
 grid-area: content-2;
-border:3px solid ;
+/* border:3px solid ; */
 background-color: lightgrey;
 display: grid;
 grid-template-columns: auto auto auto;
@@ -203,3 +216,171 @@ form button {
 
 }
 
+.footer .footercontent{
+    text-align: center;
+
+}
+.footer .footercontact{
+    text-align: center;
+}
+
+.footercontact ul{
+    display:flex;
+    /* justify-content: space-between; */
+    list-style-type: none;
+ 
+}
+
+.footercontact li {
+    margin-left: 5px;
+}
+
+.contactphone{
+    margin-right: 73%;
+}
+
+.allproductstitle h1{
+    text-align: center;
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+.allproductstitle{
+    background-color: lightgray;
+}
+
+.header .dropdown {
+    display: none;
+}
+
+.header ul li:hover .dropdown {
+    display: block;
+}
+
+.dropdown{
+    
+}
+
+.containerparent{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    width: 100%;
+    position: relative;
+    /* left: -300px; */
+    background-color: white;
+    border: solid red;
+}
+.ddheader{
+    grid-area: 1/1/2/3;
+    padding: 25px;
+    align-self: center;
+    
+    border-bottom: thin solid gray;
+    width: 100%;
+}
+
+.ddheader button{
+    border-radius: 5px;
+    margin: auto;
+    background-color: orange;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.ddleft {
+    /* margin: auto; */
+    padding: 25px;
+    border-right: thin solid gray;
+    
+}
+
+.ddright{
+    margin: auto;
+    padding: 25px;
+}
+
+.ddright ul li{
+    list-style: none;
+}
+
+.ddright ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.ddleft ul li{
+    list-style: none;
+    color: black;
+}
+
+.ddleft ul{
+}
+
+.ddleft ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.pfcontainer{
+    width: 100%;
+}
+
+.headerpf{
+    text-align: center;
+    font-size: 45px;
+    font-family: sans-serif;
+}
+
+.pfp img{
+    width: 290px;
+    margin-left: 40%;
+}
+
+.usernamepf h3{
+    font-size: 35px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.location h3{
+    text-align: center;
+    font-size: 20px;
+    color: gray;
+}   
+
+.topsection{
+    border-bottom: solid thin;
+    padding-bottom: 30px;
+    width: 100%
+}
+
+.editbutton{
+    padding-top: 15px;
+}
+
+.editbutton a{
+    text-decoration: none;
+    color: #06ed;
+}
+
+.editbutton a p {
+    text-align: center;
+    font: 15px;
+}
+
+.editbutton a:hover{
+    text-decoration: underline;
+}
+
+.bottomsection{
+    background-color: lightgray;
+    padding-bottom: 200px;
+}
+
+.bottomsection h2{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

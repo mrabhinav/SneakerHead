@@ -38,30 +38,31 @@
           </header>
           </div>
     <div class="content-1">
-        <form action="">
+        {{message}}
+        <form action="/signup" method="POST">
             <h1 style="text-align: center;">Create a new account</h1>
             <div class="name">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="First Name" name="firstname">
+                <input type="text" placeholder="Last Name" name="lastname">
             </div>
             <div class="place">
-                <select name="" id="">
+                <select name="place" id="place">
                     <option value="United States">United States</option>
                     <option value="United Kingdom">United Kingdom</option>
                 </select>
             </div> 
             <div class="createemail">
-                <input type="email" placeholder="Email">
+                <input type="email" placeholder="Email" name="email">
             </div>
             <div class="createusername">
-                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Username" name="username">
             </div>
             <div class="createpassword">
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Confirm Password">
+                <input type="password" placeholder="Password" name="password">
+                <input type="password" placeholder="Confirm Password" name="cpassword">
             </div> 
 
-            <button type="submit">Login</button>
+            <button type="submit">Create Now</button>
             <div class="forgotpassword">
                 <a href="./login.html">
                     Have an account already?

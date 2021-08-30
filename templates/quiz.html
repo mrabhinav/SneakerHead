@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="containerquiz"></div>
+    <div class="header">
+        <header>
+        <div class="logo">
+            <a href="/"><img src="../static/orangeshoe.png" alt="Logo"></a>
+        </div>
+        <div class="searchbox">
+            <input type="text" placeholder="Search">
+                <div class="searchicon">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+        </div>
+        <nav>
+            <ul>
+                {% if session["athenticated"] %}
+                    <li><a href="/logout">Logout</a></li>
+                {% else %}
+                    <li><a href="/login">Login/Signup</a></li>
+                {% endif %}
+                <li><a href="./allproduct.html">All Products</a></li>
+
+                <div class="cartlogo">
+                    <li><a href="shoppingcartpage.html"><img src="../static/orangecart.png" alt="Cart"></a></li>
+                </div>
+            </ul>
+        </nav>
+        </header>
+    </div>
+        <form action= "/correctanswer" method="POST">
+            <div class="question">
+                <h1>What is the front end code called?</h1>
+            </div>
+            <div class="answers">
+                Python
+                <input type="radio" name="answer" id="answer" placeholder="answer1" value="answer1">
+                Java
+                <input type="radio" name="answer" id="answer" placeholder="answer2" value="answer2">
+                HTML
+                <input type="radio" name="answer" id="answer" placeholder="answer3" value="answer3">
+                C++
+                <input type="radio" name="answer" id="answer" placeholder="answer4" value="answer4">
+            </div>
+            <div class="button">
+                <button type="submit">Enter</button>
+            </div>
+            <div class="result">
+                <h2>{{message}}</h2>
+                <h3>{{score}}</h3>
+            </div>
+        </form>
+        {% for record in records %}
+            {{record}}
+        {% endfor %}
+</body>
+</html>

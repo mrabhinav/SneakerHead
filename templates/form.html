@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .container{
+        }
+        h1{
+            font-size: 43px;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .studentname{
+            display: flex;
+            justify-content: space-around;
+        }
+        .studentname input:placeholder{
+            text-align: center;
+        }
+        .studentname input{
+            padding: 10px;
+            border-radius: 10px;
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+        form{
+            width: 30%;
+            box-shadow: 10px 10px 30px 0px gray;
+            border-radius: 5px;
+            padding: 20px;
+            margin: auto;
+            margin-top: 12%;
+        }
+
+        .course select{
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-left: 30%;
+        }
+
+        .grade input{
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-left: 28%;
+        }
+
+        .grade input::placeholder{
+            text-align: center;
+        }
+
+        .button button{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 70px;
+            padding-left: 70px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-left: 15%;
+            background-color: lightgreen;
+        }
+
+        p{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+        <form action="/certificate" method="POST">
+            <h1>Enter Your Details</h1>
+            <div class="studentname">
+                <input type="text" name="firstname" placeholder="Type in First Name">  
+                <input type="text" name="lastname" placeholder="Type in Last Name">
+            </div>
+            <div class="course">
+                <select name="course" id="course" name="course">
+                    <option value="Original" selected disabled>Select Your Course</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="Java Script">Java Script</option>
+                    <option value="C">C</option>
+                    <option value="HTML/CSS">HTML/CSS</option>
+                </select>
+            </div>
+            <div class="grade">
+                <input type="number" placeholder="Enter Grade" name="grade">
+            </div>
+            <div class="button">
+                <button type="submit" name="button">
+                    <p>Get your certificate</p>
+                </button>
+            </div>
+            <div class="error">
+                <h3>{{message}}</h3>
+            </div>
+        </form>
+</body>
+</html>

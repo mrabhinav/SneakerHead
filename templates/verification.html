@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+</head>
+<body>
+    <form action="/validatepassword" method="POST">
+        Enter any sentence 
+        <input type="text" name="inputverfication">
+        <button type="submit">Submit</button>
+    </form>
+    {{results}}
+    {{results[1]}}
+    <h1>Lower Case:{{results[0]}}</h1>
+    <h1>Upper Case:{{results[3]}}</h1>
+    <h1>Digits:{{results[4]}}</h1>
+    <h1>Spaces:{{results[1]}}</h1>
+    <h1>Lenght:{{results[2]}}</h1>
+    <h1>Speical Character:{{results[5]}}</h1>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .containerparent{
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            height: 10vh;
+            align-items: center;
+        }
+        .ddheader{
+            grid-area: 1/1/2/3;
+            padding: 25px;
+            align-self: center;
+            padding-left: 45%;
+            border-bottom: thin solid gray;
+        }
+
+        .ddheader button{
+            border-radius: 5px;
+            margin: auto;
+            background-color: orange;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        .ddleft {
+            /* margin: auto; */
+            padding: 25px;
+            border-right: thin solid gray;
+            padding-left: 60%;
+        }
+
+        .ddright{
+            margin: auto;
+            padding: 25px;
+        }
+
+        .ddright ul li{
+            list-style: none;
+        }
+
+        .ddright ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .ddleft ul li{
+            list-style: none;
+            color: black;
+        }
+
+        .ddleft ul{
+        }
+
+        .ddleft ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="containerparent">
+        <div class = "ddheader">
+            <button type="submit" name="signinbutton">Sign In</button>
+        </div>
+        <div class = "ddleft">
+            <h1>Brands</h1>
+            <ul>
+                <li><a href="">Nike</a></li>
+                <li><a href="">Under Armour</a></li>
+            </ul>
+        </div>
+        <div class="ddright">
+            <h1>Your Account</h1>
+            <ul>
+                <li><a href="">Account Profile</a></li>
+                <li><a href="">Log in</a></li>
+            </ul>
+        </div>
+        
+    </div>
+</body>
+</html>

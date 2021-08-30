@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 40px;
+        }
+        nav{
+            float: right;
+            padding: 10px;
+            position: relative;
+            top: -20px;
+
+        }
+        header ul {
+            display: flex;
+            margin: auto;
+            list-style-type: none;
+           
+        }
+        header ul a {
+            color: lightgrey;
+            font-size: 20px;
+            text-decoration: none;
+            text-shadow: 2px 2px lightgrey;
+        }
+        header ul li {
+            margin-right: auto;
+            border-right: solid thin white;
+            padding-right: 25px;
+        }
+        header ul li a:hover{
+            font-weight: bold;
+            color: black;
+            text-decoration: underline;
+            border-bottom: solid 3px red;
+        }
+        .welcomenote{
+            background-color: yellow;
+            color: red;
+            border-radius: 10px;
+            text-align: center;
+            width: 50%;
+            margin-left: 30%;
+            box-shadow: 3px 3px 3px 0px red;
+        }
+        .welcomenote h1 {
+            padding: 5px;
+
+            
+        }
+        .bio{
+            background-color: rgba(53, 120, 146, 0.9);
+            color: gold;
+            border-radius: 10px;
+            margin-left: 17%;
+            width: 70%;
+            
+        }
+        .bio p{
+            padding: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: justify;
+        }
+        .image img{
+            width: 70%;
+            margin-left: 15%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Quiz</a></li>
+                <li><a href="">Login/Signup</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Feedback</a></li>
+                <li><a href="">My Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="welcomenote">
+        <h1>Hi Guest Welcome to Vivaan's Wonder</h1>
+    </div>
+    <div class="bio">
+        <p>In 1869 a Russian scientist called Dmitri Mendeleev invented the periodic system that we still use today.
+            Before him others had tried to 'order' the elements but their tables were incomplete or grouped elements together which weren't similar.
+            Dmitri's table didn't include all of the elements because not all of them were known at the time.
+            He left gaps for them though and could predict their properties based on the elements around them in his table.</p>
+    </div>
+    <div class="image">
+        <img src="./static/periodictable.png" alt="periodictable">
+    </div>
+</body>
+</html>

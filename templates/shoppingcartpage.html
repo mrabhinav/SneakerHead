@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .containercart{
+            display: grid;
+            grid-template-columns: 2fr 2fr 1fr;
+        }
+        .product_img {
+            flex: 1;
+        }
+        .allcartproducts{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .productinfocart {
+            flex: 1;
+            line-height: 50px;
+            padding-top: 30px;
+            padding-left: 10px;
+        }
+        .product_img img{
+            width: 100%;
+        }
+        .cartlinks a {
+            color: #06ed;
+            padding: 10px;
+            text-decoration: underline;
+        }
+
+        .cartlinks a:hover{
+            color: purple
+        }
+        .allprices table td {
+            padding: 10px   ;
+        }
+
+        .right {
+            margin-right: 3%; 
+            margin-top: 3%;   
+        }
+
+        .middle {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <header>
+            <div class="logo">
+                <a href="./index.html"><img src="../static/orangeshoe.png" alt="Logo"></a>
+            </div>
+            <div class="searchbox">
+                <input type="text" placeholder="Search">
+                    <div class="searchicon">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./login.html">Login/Signup</a></li>
+                    <li><a href="">All Products</a></li>
+                    <div class="cartlogo">
+                        <li><a href="/cart"><img src="../static/orangecart.png" alt="Cart"></a></li>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        </div>
+    <div class="containercart">
+        <div class="left">
+        <div class="allcartproducts">
+
+            <div class="product_img">
+                <img src="../static/airforce1white.jpeg" alt="WhiteAF1">
+            </div>
+
+            <div class="productinfocart">
+                <h3>Product Name</h3>
+                <p>Product Description</p>
+                <div class="dropdowncart">
+                    Quantity
+                    <select name="" id="">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                    </select>
+                    Size
+                    <select name="" id="">
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                    </select>
+                </div>
+            
+                <div class="cartlinks">
+                    <a href="">Remove</a>
+                    <a href="">Move to wishlist</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="allcartproducts">
+            <div class="product_img">
+                <img src="../static/airforce1black.jpeg" alt="WhiteAF1">
+            </div>
+            <div class="productinfocart">
+                <h3>Product Name</h3>
+                <p>Product Description</p>
+                <div class="dropdowncart">
+                    Quantity
+                    <select name="" id="">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                    </select>
+                    Size
+                    <select name="" id="">
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                    </select>
+                </div>
+                <div class="cartlinks">
+                    <a href="">Remove</a>
+                    <a href="">Move to wishlist</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="middle">
+
+        </div>
+        <div class="right">
+        <div class="pricesummary">
+            <h1>Cart Summary</h1>
+            <div class="promocode">
+                Do you have a promo code?
+                    <input type="text" placeholder="Insert promo code here">
+                    <button type="submit">
+                        Apply
+                    </button>
+            </div>
+        
+            <div class="allprices">
+                <table>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td><sup>$</sup>180.00</td>
+                    </tr>
+                    <tr>
+                        <td>Estimated Shipping/Handling Costs</td>
+                        <td><sup>$</sup>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Tax</td>
+                        <td>--</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

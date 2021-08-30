@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="shortcut icon" href="../static/sneakerlogo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    {% endblock title %}
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% block style %}
+    {% endblock style %}
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <header>
+                <div class="logo">  
+                    <a href="/"><img src="../static/orangeshoe.png" alt="Logo"></a>
+                </div>
+            <div class="searchbox">
+                <input type="text" placeholder="Search">
+                    <div class="searchicon">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+            </div>
+            <nav>
+                <ul>
+                    {% if session["athenticated"] %}
+                        <li><a href="/logout">Logout</a></li>
+                    {% else %}
+                        <li><a href="/login">Login/Signup</a></li>
+                    {% endif %}
+                    <li><a href="./allproduct.html">All Products</a>
+                        <div class="dropdown">
+                            <div class="containerparent">
+                                <div class = "ddheader">
+                                    <button type="submit" name="signinbutton">Sign In</button>
+                                </div>
+
+                                <div class = "ddleft">
+                                    <h1>Brands</h1>
+                                    <ul>
+                                        <li><a href="">Nike</a></li>
+                                        <li><a href="">Under Armour</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="ddright">
+                                    <h1>Your Account</h1>
+                                    <ul>
+                                        {% if session["athenticated"] %}
+                                            <li><a href="/profile">Account Profile</a></li>
+                                            <li><a href="/logout">Logout</a></li>
+                                        {% else %}
+                                            <li><a href="/login">Log in</a></li>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <div class="cartlogo">
+                        <li><a href="/cart"><img src="../static/orangecart.png" alt="Cart"></a></li>
+                    </div>
+                </ul>
+            </nav>
+            </header>
+        </div>
+        <div class="content-1">
+            {% block content_1 %}
+            {% endblock content_1 %}
+        </div>
+        <div class="content-2">
+            {% block content_2 %}
+            {% endblock content_2 %}
+        </div>
+        <div class="footer">
+            <div class="footercontent">
+                <h3>SneakerHead © Copyright 2021</h3>
+                <h3>All rights reserved</h3>
+            </div>
+            <div class="footercontact">
+                <nav>
+                    <ul>
+                        <i class="fa fa-phone"></i><li class="contactphone">1234567890</li>
+                        <i class="fa fa-envelope"></i><li>sneakerheadbusiness@gmail.com</li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
