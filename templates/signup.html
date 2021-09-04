@@ -1,42 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "base.html" %}
+{% block content %}
+    {% block title %}
     <title>Create An Account</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% endblock title %}
+    {% block style %}
     <style>
         .content-1{
             background: none;
     }
     </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <header>
-              <div class="logo">
-                  <a href="./index.html"><img src="../static/orangeshoe.png" alt="Logo"></a>
-              </div>
-              <div class="searchbox">
-                  <input type="text" placeholder="Search">
-                      <div class="searchicon">
-                          <i class="fa fa-search" aria-hidden="true"></i>
-                      </div>
-              </div>
-              <nav>
-                  <ul>
-                      <li><a href="./login.html">Login/Signup</a></li>
-                      <li><a href="">All Products</a></li>
-                      <div class="cartlogo">
-                          <li><a href=""><img src="../static/orangecart.png" alt="Cart"></a></li>
-                      </div>
-                  </ul>
-              </nav>
-          </header>
-          </div>
+    {% endblock style%}
+    {% block content_1 %}
     <div class="content-1">
         {{message}}
         <form action="/signup" method="POST">
@@ -64,12 +38,12 @@
 
             <button type="submit">Create Now</button>
             <div class="forgotpassword">
-                <a href="./login.html">
+                <a href="/login">
                     Have an account already?
                 </a>
             </div>
         </form>
     </div>
     </div>
-</body>
-</html>
+    {% endblock content_1 %}
+{% endblock content %}
